@@ -52,3 +52,5 @@ fabric.properties
 
 .idea/
 SemanticZooming.iml
+
+node_modules/

@@ -6,6 +6,7 @@ export default class App extends React.Component {
         return (
             <div className={styles.WikiPage}>
                 <iframe src="https://en.wikipedia.org/wiki/French_Revolution"/>
-            </div>);
+            </div>
+        );
     }
 }
