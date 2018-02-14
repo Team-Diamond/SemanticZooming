@@ -15,6 +15,6 @@ export class Container extends React.Component {
 				<div className="containerBody">
 				</div>
 			</div>
-		)
+		);
 	}
 }

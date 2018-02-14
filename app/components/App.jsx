@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style.css';
 import IframeComm from 'react-iframe-comm';
-import { Container } from 'Container';
+import Container from './Container.jsx';
 
 export default class App extends React.Component {
     render() {
@@ -12,6 +12,7 @@ export default class App extends React.Component {
         //<IframeComm attributes={attributes} />
         return (
             <div>
+              <IframeComm attributes={attributes} />
               <Container title="Steve" />
             </div>
           );
