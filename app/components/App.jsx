@@ -2,6 +2,7 @@ import React from 'react';
 import '../style.css';
 import IframeComm from 'react-iframe-comm';
 import Container from './Container.jsx';
+import ZoomIn from '../actions/ZoomIn.js'
 
 export default class App extends React.Component {
     render() {
@@ -11,10 +12,14 @@ export default class App extends React.Component {
 
         //<IframeComm attributes={attributes} />
         return (
-            <div>
-              <IframeComm attributes={attributes} />
+            <div onClick={ZoomIn.levelOne}>
+              <IframeComm
+                  attributes={attributes}
+                  handleReady={ZoomIn.levelOne()}
+              />
               <Container title="Steve" />
             </div>
           );
+
     }
 }
