@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style.css'
 import IframeComm from 'react-iframe-comm';
-import ZoomIn from '../actions/ZoomIn.js'
+import ZoomIn from '../actions/ZoomIn'
 
 export default class App extends React.Component {
     render() {
@@ -10,10 +10,10 @@ export default class App extends React.Component {
         };
 
         return (
-            <div onClick={ZoomIn.levelOne}>
+            <div>
                 <IframeComm
                     attributes={attributes}
-                    handleReady={ZoomIn.levelOne()}
+                    handleReady={ZoomIn.levelOne}
                 />
             </div>)
             ;

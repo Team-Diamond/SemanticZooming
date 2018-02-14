@@ -30,6 +30,9 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+        extensions: [".jsx", ".js"]
+    },
 // add this line
     plugins: [HtmlWebpackPluginConfig]
 };
