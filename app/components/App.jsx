@@ -2,8 +2,6 @@ import React from 'react';
 import '../style.css'
 import IframeComm from 'react-iframe-comm';
 import ZoomIn from '../actions/ZoomIn.js'
-// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import MyAwesomeReactComponent from './MyAwesomeReactComponent';
 
 export default class App extends React.Component {
     render() {
@@ -17,10 +15,7 @@ export default class App extends React.Component {
                     attributes={attributes}
                     handleReady={ZoomIn.levelOne()}
                 />
-    {/*<MuiThemeProvider>*/}
-    {/*<MyAwesomeReactComponent />*/}
-    {/*</MuiThemeProvider>*/}
-    </div>)
-        ;
+            </div>)
+            ;
     }
 }
