@@ -5,14 +5,16 @@
   "repository": "https://github.com/Team-Diamond/SemanticZooming.git",
   "author": "Gubbala Madhuri <gubbalamadhuri1991@gmail.com>",
   "license": "MIT",
-
   "scripts": {
     "start": "webpack-dev-server"
   },
-
   "dependencies": {
+    "css-loader": "^0.28.9",
     "html-webpack-plugin": "^2.30.1",
     "path": "^0.12.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.20.1",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   },
@@ -20,6 +22,10 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-react": "^6.24.1",
+    "envify": "^4.1.0",
+    "uglify-js": "^3.3.10",
+    "uglify-js-brunch": "^2.10.0",
+    "uglifyify": "^4.0.5"
   }
 }
