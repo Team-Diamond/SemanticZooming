@@ -1,6 +1,6 @@
 import React from 'react';
 import IframeComm from 'react-iframe-comm';
-import { Container } from './Container.jsx';
+import {Container} from './Container.jsx';
 import ZoomIn from '../actions/ZoomIn'
 
 export default class App extends React.Component {
@@ -12,13 +12,13 @@ export default class App extends React.Component {
         //<IframeComm attributes={attributes} />
         return (
             <div>
-              <IframeComm
-                  attributes={attributes}
-                  handleReady={ZoomIn.levelOne}
-              />
-            <Container title={"Steve"} />
+                <IframeComm
+                    attributes={attributes}
+                    handleReady={ZoomIn.levelOne}
+                />
+                <Container title={"Steve"} />
             </div>
-          );
+        );
 
     }
 }
