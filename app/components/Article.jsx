@@ -24,10 +24,22 @@ export class Article extends React.Component{
 	}
 
 	render(){
-		const content = this.props.content;
-		const article = content.map(function(element){
+		const content = this.props.content;		
+		const title = content.title;
+		const outlineNumber = content.outline_number;
+		const thisLevelHTML = content.content_HTML;
+		const children = const.subsections;
+
+		const article = thisLevelHTML.map(function(element){
 			return zoom(element, views, this.props.zoom);
 		});
-		return ({article});
+		
+		return (
+			<h2>{outlineNumber} {title}</h2>
+			{article}
+			<div className="contentBox">
+				{article}
+			</div>
+		);
 	}
 }
