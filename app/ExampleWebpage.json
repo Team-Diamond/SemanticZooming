@@ -1,20 +1,3 @@
-Json Structure:
-"article" : { 
-	"title" : String - title of the article,
-	"content_HTML" : [JSX] - array of top-level raw html elements of this section's content,
-	"subsections" : [ Array of subsections content in the following format:
-		{
-			"title" : String - section header,
-			"outline_number" : Float - the section's number in the outline,
-			"content_HTML" : [array of top-level raw html elements of this section's content]
-			"subsections" : [
-				{Repeat structure}
-			]
-		}
-	]
-}
-
-
 "article" : { 
 	"title" : "French Revolution",
 	"content-HTML" : [
