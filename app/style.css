@@ -1,4 +1,4 @@
-* {
+body{
     height: 100%;
     width: 100%;
     border: 0;
@@ -25,4 +25,21 @@
     border-width: 2px;
     border-color: #3164C7;
     border-radius: 20px;
+}
+
+div{
+  transition: width 2s, max-width 2s, height 2s, max-height 2s;
+  transition-timing-function: ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.content{
+  padding: 15px;
+}
+
+.article-container{
+  background: beige;
+  margin-left: 10%;
+  margin-right: 10%;
 }
