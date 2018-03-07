@@ -2,6 +2,23 @@ import React from 'react';
 import {zoomStyle, createZoomedElement} from '../actions/Zoomable.js'
 
 var views = [
+	{className: "content-container", levels :[
+		{ view: 0, styles:[
+			{name: "maxWidth", value: "100%"},
+			{name: "border", value: "1px solid black"}
+		]},
+		{ view: -1, styles:[
+			{name: "maxWidth", value:"100%"}
+		]},
+		{ view: -2, styles: [
+			{name: "maxWidth", value:"33%"},
+			{name: "clear", value: "both"},
+			{name: "float", value: "left"}
+		]},
+		{ view: -3, styles: [
+			{name: "maxWidth", value:"25%"}
+		]}
+	]},
 	{className: "content", levels :[
 		{ view: 0, styles:[
 			{name: "maxHeight", value: "auto"},
@@ -9,12 +26,12 @@ var views = [
 			{name: "border", value: "1px solid black"}
 		]},
 		{ view: -1, styles:[
-			{name: "maxHeight", min:300, max:500, unit:"px"},
-			{name: "maxWidth", value:"33%"}
+			{name: "maxHeight", min:200, max:300, unit:"px"},
+			{name: "maxWidth", value:"100%"}
 		]},
 		{ view: -2, styles: [
 			{name: "maxHeight", min:200, max:400, unit:"px"},
-			{name: "maxWidth", value:"33%"}
+			{name: "maxWidth", value:"33%"},
 		]},
 		{ view: -3, styles: [
 			{name: "maxHeight", min:125, max: 200, unit:"px"},
