@@ -3,7 +3,7 @@ import {zoomStyle, createZoomedElement} from '../actions/Zoomable.js';
 import {Subsection} from './Subsection.jsx';
 
 var views = [
-	{className: "content", levels :[
+	{className: "section-content", levels :[
 		{ view: 0, styles:[
 			{name: "maxHeight", value: "none"},
 			{name: "maxWidth", value: "100%"},
@@ -37,11 +37,13 @@ export class Article extends React.Component{
 		
 		return (
 			<div className="article-container" style={zoomStyle("article-container", views, depth, zoom)}>
-				<h2>{title}</h2>
-				<div className="content" style={zoomStyle("content", views, 1, zoom)}>
+				<h1>{title}</h1>
+				<div className="section-content" style={zoomStyle("section-content", views, 1, zoom)}>
 					{sectionContent}
 				</div>
-				{subsections}
+				<div className="subsection-container" style={zoomStyle("subsection-container", views, depth, zoom)}>
+					{subsections}
+				</div>
 			</div>
 		);
 	}

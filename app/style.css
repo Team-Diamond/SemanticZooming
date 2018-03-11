@@ -3,6 +3,11 @@ body{
     width: 100%;
     border: 0;
     margin: 0;
+    font-family: 'Arial', 'sans-serif'
+}
+
+h1, h2, h3{
+  font-family: 'Georgia', 'serif';
 }
 
 .container-background {
@@ -34,12 +39,37 @@ div{
   text-overflow: ellipsis;
 }
 
-div.content{
-  padding: 15px;
+.section-container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0px 15px 0px 15px;
+}
+
+div.section-content {
+
+}
+
+div.section-content p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: block;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .article-container{
-  background: beige;
+  display: flex;
+  flex-flow: row wrap;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.subsection-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  transition: flex 2s;
+  padding: 15px;
 }
