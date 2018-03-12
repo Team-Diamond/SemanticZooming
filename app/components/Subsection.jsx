@@ -4,11 +4,13 @@ import {zoomStyle, createZoomedElement} from '../actions/Zoomable.js'
 var views = [
 	{className: "section-container", levels :[
 		{ view: 0, styles:[
+			{name: "padding-right", value: "0px"}
 		]},
 		{ view: -1, styles:[
 		]},
 		{ view: -2, styles: [
 			{name: "flex", value:" 1 33%"},
+			{name: "padding-right", value: "15px"}
 		]},
 		{ view: -3, styles: [
 			{name: "flex", value:"0 1 20%"}
@@ -16,15 +18,17 @@ var views = [
 	]},
 	{className: "section-title", levels :[
 		{ view: 0, styles: [
-			{name: "flex", value: "1 1 20%"}
+			{name: "flex", value: "1 1 20%"},
+			{name: "padding-right", value: "15px"}
 		]},
-		{ view: 1, styles: [
+		{ view: -2, styles: [
+			{name: "flex", value: "1 0 100%"},
+			{name: "padding-right", value: "0px"}
 		]}
 	]},
 	{className: "section-content", levels:[
 		{ view: 0, styles:[
-			{name: "flex", value: "3 0 75%"},
-			{name: "padding", value:"15px"}
+			{name: "flex", value: "3 0 70%"},
 		]},
 		{ view: -1, styles:[
 			{name: "border", value: "1px solid grey"}
@@ -37,13 +41,13 @@ var views = [
 			{name: "flex", value: "3 60%"}
 		]},
 		{ view: -1, styles:[
-			{name: "max-height", min: 200, max: 300, unit: "px"}
+			{name: "max-height", min: 150, max: 200, unit: "px"}
 		]},
 		{ view: -2, styles: [
-			{name: "max-height", min: 100, max: 200, unit: "px"},
+			{name: "max-height", min: 100, max: 150, unit: "px"},
 		]},
 		{ view: -3, styles: [
-			{name: "max-height", min: 50, max: 100, unit: "px"}
+			{name: "max-height", value: "100px"}
 		]}
 	]},
 	{className: "subsection-container", levels :[
