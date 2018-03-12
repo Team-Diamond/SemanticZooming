@@ -12,7 +12,7 @@ import React from 'react';
  *
  * @returns {style} - an object containing style names and values that can be passed to a JSX element
  */
-export function zoomStyle(className, views, depth, zoom){
+export function zoomStyle(className, views, depth, zoom, ref=null){
 	var zoomLayer = Math.floor(zoom);
 	var zoomLayerPosition = zoom - zoomLayer;
 	var viewLevel = zoomLayer - depth;
@@ -40,7 +40,12 @@ export function zoomStyle(className, views, depth, zoom){
 				let name = attr.name;
 				let value;
 				if(attr.value){ //If there is a specified value, use that
-					value = attr.value
+					if(attr.value === "scrollHeight" && ref){
+						console.log("setting value to scrollHeight");
+						value = ref.scrollHeight;
+					} else{
+						value = attr.value;
+					}
 				} else{ //If this is not the current view level, use the max value, otherwise modulate by zoomPosition
 					if( i != viewLevel ){
 						value = parseFloat(attr.max) + attr.unit;

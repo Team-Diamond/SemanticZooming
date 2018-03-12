@@ -5,7 +5,7 @@ import {Subsection} from './Subsection.jsx';
 var views = [
 	{className: "section-content", levels :[
 		{ view: 0, styles:[
-			{name: "maxHeight", value: "none"},
+			{name: "maxHeight", value: "scrollHeight"},
 			{name: "maxWidth", value: "100%"},
 			{name: "border", value:"1px solid black"}
 		]},
@@ -38,7 +38,7 @@ export class Article extends React.Component{
 		return (
 			<div className="article-container" style={zoomStyle("article-container", views, depth, zoom)}>
 				<h1>{title}</h1>
-				<div className="section-content" style={zoomStyle("section-content", views, 1, zoom)}>
+				<div className="section-content" ref={(div) => {this.sectionContent = div; }} style={zoomStyle("section-content", views, 1, zoom, this.sectionContent)}>
 					{sectionContent}
 				</div>
 				<div className="subsection-container" style={zoomStyle("subsection-container", views, depth, zoom)}>

@@ -38,7 +38,8 @@ var views = [
 	]},
 	{className: "section-text", levels :[
 		{ view: 0, styles:[
-			{name: "flex", value: "3 60%"}
+			{name: "flex", value: "3 60%"},
+			{name: "max-height", value: "scrollHeight"}
 		]},
 		{ view: -1, styles:[
 			{name: "max-height", min: 150, max: 200, unit: "px"}
@@ -87,12 +88,23 @@ export class Subsection extends React.Component{
 		const subsections = content.subsections.map(function(subsection, i){
 			return <Subsection content={subsection} depth={depth+1} zoom={zoom} key={"section_" + subsection.outline_number}/>;
 		});
+
+		var vdz = [views, depth, zoom];
 		
 		return (
-			<div className="section-container" style={zoomStyle("section-container", views, depth, zoom)}>
-				<h2 class="section-title" style={zoomStyle("section-title", views, depth, zoom)}>{title}</h2>
-				<div className="section-content" style={zoomStyle("section-content", views, depth, zoom)}>
-					<div className="section-text" style={zoomStyle("section-text", views, depth, zoom)}>
+			<div className="section-container" 
+				style={zoomStyle("section-container", views, depth, zoom)}
+			>
+				<h2 className="section-title" 
+					style={zoomStyle("section-title", views, depth, zoom)}
+				>{title}</h2>
+				<div className="section-content"  
+					style={zoomStyle("section-content", views, depth, zoom, this.sectionContent)}
+				>
+					<div className="section-text" 
+						ref={(div) => {this.sectionText = div; }}
+						style={zoomStyle("section-text", views, depth, zoom, this.sectionText)}
+					>	
 						{sectionContent}
 					</div>
 					<div className="subsection-container" style={zoomStyle("subsection-container", views, depth, zoom)}>

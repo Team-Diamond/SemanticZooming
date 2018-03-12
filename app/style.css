@@ -15,10 +15,15 @@ h2{
 }
 
 div{
-  transition: width 2s, max-width 2s, height 2s, max-height 2s;
-  transition-timing-function: ease;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.article-container{
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .section-container {
@@ -29,6 +34,7 @@ div{
 
 div.section-content {
     padding: 15px;
+    transition: all 2s;
 }
 div.section-content p{
   overflow: hidden;
@@ -41,11 +47,8 @@ div.section-content p{
   padding-bottom:  1em;
 }
 
-.article-container{
-  display: flex;
-  flex-flow: row wrap;
-  margin-left: 10%;
-  margin-right: 10%;
+.section-text{
+  transition: all 2s;
 }
 
 .subsection-container{

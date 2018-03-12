@@ -44,7 +44,7 @@ export class ZoomBar extends React.Component{
 		var circleY = zoomBarHeight - (zoom / this.numZoomLayers * zoomBarHeight) + yOffset;
 		var sliderCircle = 
 			<circle 
-			class="slider-circle" 
+			className="slider-circle" 
 			cx={zoomBarWidth/2} 
 			cy={circleY} 
 			r={circleRadius} />;
